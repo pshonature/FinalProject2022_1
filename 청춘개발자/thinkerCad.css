@@ -1,0 +1,209 @@
+body {
+    margin: 0 auto;
+    height: 425vh;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul li {
+    list-style: none;
+}
+
+.listLine {
+    border-left: 3px solid gray;
+    height: 1500px;
+    position: absolute;
+    left: 15%;
+    top: 1200px;
+    z-index: 99;
+}
+
+/* nav */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    background-color: rgb(251,251,251, 0.9);
+    border-bottom: 2px solid gray;
+    position: fixed;
+    width: 100%;    
+    z-index: 100;
+    top: 0;
+}
+
+nav #devTitle {
+    position: absolute;
+    left: 25px;
+    top: 10px;
+    color: rgb(6, 199, 85);
+}
+
+.menu {
+    display: flex;
+    text-align: center;
+}
+
+.menu li {
+    padding: 10px 50px;
+    border-bottom: 3px solid rgb(251, 251, 251, 0);
+}
+
+.menu li:hover {
+    border-bottom: 2px solid rgb(6, 199, 85);
+    opacity: 0.7;
+}
+
+#thinkerCadBorder {
+    border-bottom: 2px solid rgb(250,35,60);
+    opacity: 0.7;
+}
+
+.icon {
+    font-size: 40px;
+    padding-right: 40px;
+}
+
+/* nav end */
+.icon2 {
+    font-size: 50px;
+    border: 7px solid black;
+    border-radius: 25px;
+    padding: 7px 11px;
+    display: inline;
+}
+/* title */
+
+.section1 {
+    margin-top: 170px;
+    text-align: center;
+}
+
+.section1 h1 {
+    margin: 30px 0px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.section1 h2{
+    font-size: 70px;
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+
+.section1 .line {
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    background-color: rgb(250,35,60);
+    padding: 20px 0px;
+    border-radius: 30px;
+    color: white;
+    margin-left: 38%;
+    margin-right: 38%;
+}
+
+.section1 .pro {
+    height: 380px;
+    margin-top: 50px;
+}
+
+/* ------- */
+
+#historyTitel {
+    position:absolute;
+    top: 1090px;
+    left: 16%;
+    font-size: 40px;
+    font-weight: bold;
+    border-bottom: 3px solid black;
+    display: inline-block;
+}
+
+#fristHistoryList {
+    margin-top: 280px;
+}
+
+.history img {
+    width: 240px;
+    height: 180px;
+    float: left;
+    margin-right: 55px;
+    border-radius: 25px;
+}
+
+.historyList {
+    margin-left: 17%;
+}
+
+.history li {
+    margin-top: 75px;
+}
+
+.history h1 {
+    font-size: 23px
+}
+
+.history .text h1 {
+    padding-bottom: 7px;
+    font-weight: 500;
+}
+
+.history .text h2 {
+    padding-bottom: 7px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.history .text h3 {
+    font-weight: 300;
+}
+
+/* ciruit */
+
+#lastLi {
+    margin-bottom: 250px;
+}
+
+.circuitTitle {
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 270px;
+    margin-bottom: 80px;
+    border-bottom: 3px solid black;
+    display: inline-block;
+
+}
+
+.mainCircuit {
+    padding: 15px 0px 15px 3%;
+}
+
+.mainCircuit img {
+    float: left;
+    width: 50%;
+    height: 700px;
+}
+
+
+.textLine {
+    font-size: 30px;
+    font-weight: 900;
+    margin-left: 58%;
+    margin-bottom: 40px;
+}
+
+#circuitList li{
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 55%;
+    padding: 10px 0px;
+    margin-bottom: 30px;
+    padding-right: 15px;
+}

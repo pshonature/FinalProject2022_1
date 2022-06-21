@@ -1,0 +1,436 @@
+body {
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul li {
+    list-style: none;  
+}
+
+.border-radius {
+    border-radius: 10px;
+}
+
+.exText {
+    margin-top: 20px;
+    font-size: 15px;
+    color: rgb(202, 202, 202);
+    border-bottom: 1px solid rgb(154, 154, 154);
+    display: inline-block;
+}
+
+#gradcircle {
+    background: linear-gradient(to bottom, rgb(17, 225, 201),rgb(255, 162, 40));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-size: 80px;
+    animation-duration: 5s;
+    animation-name: slidein;
+    /* background: linear-gradient(방향, 시작색상, 끝색상); ▶ 직선 형태의 그라디언트 기본형태
+    -webkit-background-clip: text; ▶ 텍스트에만 백그라운드 적용
+    -webkit-text-fill-color: transparent; ▶ 텍스트를 투명하게 */
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 100%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+
+    }
+}
+
+
+/* h2 {
+    color: rgb(6,199,85);
+    font-size: 23px;
+}
+
+span {
+    color: rgb(97,97,97);
+    font-size: 17px;
+} */
+
+.vl {
+    border-left: 2px dashed gray;
+    height: 3650px;
+    position: absolute;
+    left: 50%;
+    top: 1200px;
+    z-index: 99;
+}
+
+/* nav */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    background-color: rgb(251,251,251, 0.9);
+    border-bottom: 2px solid gray;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+nav #devTitle {
+    position: absolute;
+    left: 25px;
+    top: 10px;
+    color: rgb(6, 199, 85);
+}
+
+.menu {
+    display: flex;
+    text-align: center;
+}
+
+.menu li {
+    padding: 10px 50px;
+    border-bottom: 3px solid rgb(251, 251, 251, 0);
+}
+
+.menu li:hover {
+    border-bottom: 2px solid rgb(6, 199, 85);
+    opacity: 0.7;
+}
+
+.icon {
+    font-size: 40px;
+    padding-right: 40px;
+}
+
+/* nav */
+
+/* 1  */
+header {
+    padding-bottom: 110px; /* for mainImg background */
+}
+
+.main {
+    text-align: center;
+    display: block;
+}
+
+.main .img {
+    background-color: rgb(94, 202, 94, 0.2);
+}
+
+.main img {
+    height: 350px;
+    width: 1200px;
+    padding: 35px 0px;
+    /* margin-top: 220px; */
+}
+
+.main div span {
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    margin-top: -15px;
+    color: rgb(97,97,97);
+}
+
+/* 1 end */
+
+/* 1 section */
+
+.main_1 {
+    margin-left: 13%;
+}
+
+.main_1 h3{
+    font-weight: bold;
+    font-size: 55px;
+}
+
+.main_1 h2{
+    color: rgb(6,199,85);
+}
+
+.main_1 span{
+    color: rgb(97,97,97);
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.main_1 .div1 {  /* 각 섹션의 margin이 오류가 나면 각자 div에 class를 주고 margin 각각 설정 */
+    margin-top:500px;
+    
+}
+
+.main_2 {
+    position: absolute;
+    left: 50%;
+    top: 1300px;
+}
+
+.main_2 img {
+    width: 500px;
+    height: 400px;
+}
+
+/* 1 end */
+
+/* 2 section */
+.main_4 {
+    text-align: right;
+    margin-right: 10%;
+}
+
+.main_4 h3{
+    font-weight: bold;
+    font-size: 55px;
+}
+
+.main_4 h2{
+    color: rgb(6,199,85);
+}
+
+.main_4 span{
+    color: rgb(97,97,97);
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.main_4 div{
+    margin-top: 440px;
+    
+}
+
+.main_3 {
+    position: absolute;
+    right: 50%;
+    top: 2050px;
+}
+
+.main_3 img {
+    width: 500px;
+    height: 400px;
+}
+
+
+/* 2 end */
+
+
+/* 3 section */
+
+.main_5 {
+    text-align: left;
+    margin-left: 10%;
+}
+
+.main_5 h3{
+    font-weight: bold;
+    font-size: 55px;
+}
+
+.main_5 h2{
+    color: rgb(6,199,85);
+
+}
+
+.main_5 span{
+    color: rgb(97,97,97);
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.main_5 div{
+    margin-top: 480px;
+    
+}
+
+.main_6 {
+    position: absolute;
+    left: 50%;
+    top: 2800px;
+}
+
+.main_6 img {
+    width: 500px;
+    height: 400px;
+}
+
+/* 3 end */
+
+/* 4 section */
+.main_8 {
+    text-align: right;
+    margin-right: 10%;
+}
+
+.main_8 h3{
+    font-weight: bold;
+    font-size: 55px;
+}
+
+.main_8 h2{
+    color: rgb(6,199,85);
+
+}
+
+.main_8 span{
+    color: rgb(97,97,97);
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.main_8 div{
+    margin-top: 460px;
+    
+}
+
+.main_7 {
+    position: absolute;
+    right: 50%;
+    top: 3550px; /* ++  705px */
+}
+
+.main_7 img {
+    width: 500px;
+    height: 400px;
+}
+/* 4 end */
+
+/* sectin5 end */
+.main_9 {
+    text-align: left;
+    margin-left: 10%;
+    padding-bottom: 500px; /* Start footer */
+}
+
+.main_9 h3{
+    font-weight: bold;
+    font-size: 55px;
+}
+
+.main_9 h2{
+    color: rgb(6,199,85);
+
+}
+
+.main_9 span{
+    color: rgb(97,97,97);
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.main_9 div {  /* 각 섹션의 margin이 오류가 나면 각자 div에 class를 주고 margin 각각 설정 */
+    margin-top: 490px;
+    
+}
+
+.main_10 {
+    position: absolute;
+    left: 50%;
+    top: 4300px;
+}
+
+.main_10 img {
+    width: 500px;
+    height: 400px;
+}
+
+/* 5 end */
+
+/* footer */
+
+.footerTitle {
+    text-align: center;
+}
+
+.h3Title {
+    font-size: 60px;
+}
+
+.fontSize {
+    margin: 15px;
+    color: rgb(167, 167, 167);
+    font-size: 17px;
+    font-weight: 400;
+}
+
+footer span {
+    color: rgb(97,97,97);
+    font-size: 20px;
+    font-weight:500;
+}
+
+.mainTitle {
+    text-align: center;
+    background-color: rgb(94, 202, 94, 0.2);
+    padding-top: 35px;
+    padding-bottom: 30px;
+    width: 100%;    
+}
+
+.mainTitle img {
+    width: 800px; /* 466px */
+    height: 350; /* 350 */
+}
+
+footer {
+    text-align: center;
+}
+
+footer ul {
+    margin-top: 50px;
+    text-align: center;
+    display: inline-flex;
+    margin-right: 30px;
+}
+
+footer li {
+    margin: 0;
+    border: 1px solid  #ddd;
+    border-radius: 5px; 
+    padding: 25px;
+    margin: 35px;
+}
+
+.over {
+    overflow: scroll;
+}
+
+.content_list h3 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+
+.content_list h4 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.content_list .fontSize {
+    font-size: 18px;
+    text-align: justify;
+    color: rgb(125, 125, 125);
+    letter-spacing: -0.5px;
+}
+
+.imgBorder img{
+    border-radius: 10px;
+}
+
+ul img {
+    width: 300px; /* 466px */
+    height: 350; /* 350 */
+}
+
+/*2  */

@@ -1,0 +1,115 @@
+.image {
+  height: 300px;
+  width: 300px;
+}
+h2 {
+  text-align: center;
+}
+body {
+  margin :0;
+  font-family: 'Nanum Gothic', sans-serif;
+  padding-top: 75px;
+  font-size: 20px;
+  
+}
+
+.navbar {
+  display: flex;
+  justify-content:space-between;
+  font-size: 15px;
+  align-items:  center;
+  background-color: black;
+  color: white;
+  padding: 8px 12px;
+  position: fixed;
+  top: 0;
+  /* width: 100% */
+  left: 0;
+  right: 0;
+
+  
+}
+a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 12px;
+}
+.navbar_menu {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  
+}
+
+.navbar_menu li {
+  padding: 8px 12px;
+}
+
+.navbar_logo {
+  list-style: none;
+  padding-right: 15px;
+  color: black;
+  font-size: 15px;  
+}
+.img1{
+  height: 20px;
+}
+
+.navbar_menu li:hover {
+  background-color:#d49466;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 768px) { /*화면 줄였을때 */
+e  .navbar {
+    flex-direction: column;
+    font-weight: 20px;
+  }
+  .navbar_menu {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
+.section {
+  padding: 8px 12px;
+  margin-top: 5px;
+ 
+}
+.sec {
+  
+  
+  text-align: center;
+}
+
+.sec2 {
+  padding-left: 250px;
+  padding-top: 10px;
+ 
+  align-items: center;
+}
+
+
+.img2 { 
+  height: 300px;
+  width: 300px;
+  
+}
+
+.main1 {
+  display: flex;
+  border: 3px solid black;
+  margin-bottom: 15px;
+}
+
+.sptitle {
+  margin-right: 40px;
+  line-height: 250px;
+}
+
+.sp {
+  transform: translateY(40%);
+}
+p {
+  transform: translateY(35%);
+}

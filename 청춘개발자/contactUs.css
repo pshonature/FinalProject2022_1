@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    height: 565vh;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul li {
+    list-style: none;
+}
+
+/* nav */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    background-color: rgb(251,251,251, 0.9);
+    border-bottom: 2px solid gray;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+}
+
+nav #devTitle {
+    position: absolute;
+    left: 25px;
+    top: 10px;
+    color: rgb(6, 199, 85);
+}
+
+.menu {
+    display: flex;
+    text-align: center;
+}
+
+.menu li {
+    padding: 10px 50px;
+    border-bottom: 3px solid rgb(251, 251, 251, 0);
+}
+
+.menu li:hover {
+    border-bottom: 2px solid rgb(6, 199, 85);
+    opacity: 0.7;
+}
+
+.icon {
+    font-size: 40px;
+    padding-right: 40px;
+}
+
+/* nav end */
+
+/* title */
+
+.teamTitle {
+    color: black;
+    margin-top: 70px;
+    text-align: center;
+    font-size: 80px;
+    font-weight: boder;
+}
+
+
+div img {
+    margin-top: 220px;
+    height: 350px;
+    width: 1200px;
+}
+
+div span {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(97,97,97);
+    margin-bottom: 5px;
+}
+
+/* title end */
+.title {
+    margin-bottom: 220px;
+}
+/* teamList */
+
+main {
+    text-align: center;
+}
+
+main ul {
+    text-align: center;
+    max-width: 1200px;
+    margin: 70px auto 0;
+    padding-right: 40px;
+}
+
+main li {
+    border: 2px solid rgb(212, 212, 212);
+    border-radius: 5px;
+    background-color: rgb(251,251,253);
+    margin: 60px;
+    padding-top: 15px;
+}
+
+.pic {
+    margin: 0;
+    width: 400px;
+    height: 400px;
+    border-radius: 5px;
+}
+
+li div h1 {
+    font-size: 25px;
+    margin-bottom: 7px;
+}
+
+.mail {
+    color:rgb(1,191,165);
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.do {
+    color: rgb(97,97,97);
+    font-weight: bold;
+}
+
+.ex {
+    font-size: 18px;
+    font-weight: 400;
+    text-align: justify;
+    color: rgb(97,97,97);
+    padding: 55px;
+}

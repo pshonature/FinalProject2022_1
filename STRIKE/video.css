@@ -1,0 +1,80 @@
+h1 {
+    text-align: center;
+  }
+  .review1 {
+    border: 1px solid black;
+    padding: 8px 12px;
+    margin: 8px 12px;
+  }
+  
+  img {
+    height: 20px;
+  }
+  h2 {
+    text-align: center;
+  }
+  body {
+    margin :0;
+    font-family: 'Nanum Gothic', sans-serif;
+    padding-top: 75px;
+    font-size: 20px;
+    
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content:space-between;
+    font-size: 15px;
+    align-items:  center;
+    background-color: black;
+    padding: 4px 8px;
+    position: fixed;
+    top: 0;
+    /* width: 100% */
+    left: 0;
+    right: 0;
+    
+    
+  }
+  a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+  }
+  .navbar_menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    
+  }
+  
+  .navbar_menu li {
+    padding: 8px 12px;
+  }
+  
+  .navbar_logo {
+    list-style: none;
+    padding-right: 15px;
+    color: black;
+    font-size: 15px;  
+  }
+  .img1{
+    height: 20px;
+  }
+  
+  .navbar_menu li:hover {
+    background-color:#d49466;
+    border-radius: 4px;
+  }
+  
+  video {
+    
+    width: 800px;
+    align-items: center;
+    padding: 0;
+    margin-left: 400px;
+  }
+  
+  .video {
+    align-content: center;
+  }

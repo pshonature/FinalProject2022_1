@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../anonymous_css.css">
+    <title>Anonymous Report</title>
+</head>
+<body>
+<!-- -------------------------------------------------------------------------------------------------- -->
+<!-- Title Main -->
+
+    <nav>
+         <ul class="nav">
+            <li class="black text_center text_li_title_size"><strong>INDEX</strong></li>
+            <hr class="nav">
+            <a href="../index.html"><li class="btn black text_center text_li_size symbol"><strong>타이틀</strong></li></a>
+            <a href="./menu_team.html"><li class="btn black text_center text_li_size symbol"><strong>팀원 소개</strong></li></a>
+            <a href="./menu_info.html"><li class="btn black text_center text_li_size symbol"><strong>작품 개요</strong></li></a>
+            <a href="./menu_play.html"><li class="btn black text_center text_li_size symbol"><strong>시연</strong></li></a>
+            <a href="./menu_design.html"><li class="btn black text_center text_li_size symbol select"><strong>설계</strong></li></a>
+            <a href="./menu_review.html"><li class="btn black text_center text_li_size symbol"><strong>후기</strong></li></a>
+            <a href="./menu_data.html"><li class="btn black text_center text_li_size symbol"><strong>자료실</strong></li></a>
+            <p class="copyright"><br><br><br><br><br>© 2022 [ TEAM_ANONYMOUS ]<br>All Rights Reserved.</p>
+        </ul>
+    </nav>
+
+    <h1 name="title_element" class="white text_center text_big lower_margin padding_right">ANONYMOUS_<span class="text_gray">REPORT</span></h1>
+    <h2 name="title_element" class="white text_center lower_margin padding_right" id="sub_title_anim">[ 설계 ]</h2><hr class="title margin_right" id="hr_anim">
+
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- Article -->
+
+    <p class="scroll_down white_ text_center padding_right"><b><span id="text_dia">▼ SCROLL_DOWN ▼</span></b></p>
+    <p class="content white_ text_center padding_right" id="text_appear">
+        <br><br>
+    </p>
+
+    <img name="title_element" src="../image/img_blueprint.png" class="img_option_1 padding_right bottom_margin_zero" id="img_op1_anim">
+    <h3 class="page_title super_big_font menu_2_title text_center padding_right" id="text_appear">작품 설계 <span id="text_dia_fast">_</span></h3>
+    <p class="content white_ text_center padding_right" id="text_appear">
+        <br><br><br><br><br><br><br><span>◈</span>
+    </p>
+    
+    <h3 class="big_font_ptitle white_gray text_center padding_right" id="text_appear">PART 1 : 총기 본체 <span id="text_dia_fast">_</span></h3>
+    <img name="title_element" src="../image/bp_gun.jpg" class="blue_print padding_right_bp bottom_margin_zero" id="title_icon_anim">
+    <iframe class="code_disp padding_right_super bottom_margin_zero" src="./code_gun.html" frameborder="0"  width="850" height="845"></iframe>
+    <hr class="hr__">
+    <p class="content_ text_center padding_right" id="text_appear">
+        방아쇠를 당기면 방아쇠 후면에 연결된 스위치가 트리깅 되고, 총구 쪽에 위치한 레이저 모듈이 작동합니다.<br>
+        방아쇠를 당겨 가상 탄환을 소비할 때 마다 LCD 모니터에 남은 가상 탄환 수가 업데이트 됩니다.<br>
+        만일, 가상 탄환을 모두 소비하였다면 총기를 흔들어 진동감지 센서를 트리깅 함으로써<br>
+        가상 탄환을 재장전 하여, 다시 사격할 수 있습니다.<br>
+        각 상황에 따라 DFPlayerMini와 소형 스피커를 통해 알맞은 효과음이 적재적소로 재생됩니다.<br>
+    </p>
+    <hr class="hr__">
+    <h3 class="big_font_ptitle white_gray text_center padding_right" id="text_appear">총기 사용 부품 <span id="text_dia_fast">_</span></h3>
+    <p class="content text_left padding_right_md" id="text_appear">
+        ▶ 레이저 모듈 : 가상 탄환의 역할을 하는 레이저의 발사를 위해 사용하였습니다.<br>
+        ▶ 진동감지 센서 : 장전 동작의 트리거 역할을 합니다.<br>
+        ▶ DFPlayerMini : 재생할 효과음 파일을 담아두는 메모리 역할을 합니다.<br>
+        ▶ 소형 스피커 : DFPlayerMini에 담긴 효과음을 재생합니다.<br>
+        ▶ LCD 모니터 : 남은 가상 탄환의 수를 확인할 수 있습니다.<br>
+        ▶ 가변저항 : LCD 모니터의 백라이트 밝기를 조절합니다.<br>
+    </p>
+    <p class="content text_center padding_right" id="text_appear">
+        <br><br><br><br><br><br><br><span>◈</span><br><br>
+    </p>
+
+
+
+    <h3 class="big_font_ptitle white_gray text_center padding_right" id="text_appear">PART 2 : 타겟 <span id="text_dia_fast">_</span></h3>
+    <img name="title_element" src="../image/bp_target.jpg" class="blue_print padding_right_bp bottom_margin_zero" id="title_icon_anim">
+    <iframe class="code_disp padding_right_super bottom_margin_zero" src="./code_target.html" frameborder="0"  width="850" height="845"></iframe>
+    <hr class="hr__">
+    <p class="content_ text_center padding_right" id="text_appear">
+        페어링된 스마트폰으로 가동 명령을 내리면, 표적과 연결된 서보 모터가 동작하기 시작합니다.<br>
+        한 번 가동된 타겟은 정지 명령을 내리거나, 가상 탄환에 피격되기 전까지 절대 멈추지 않습니다.<br>
+        움직이는 타겟의 정중앙을 가상 탄환 레이저로 정확히 타격하면<br>
+        조도센서가 이를 감지하여 피격 함수를 실행시켜 표적이 잠시 경직됩니다.<br>
+        타겟 가동 시, 피격 시에 DFPlayerMini와 소형 스피커를 통해 알맞은 효과음이 적재적소로 재생됩니다.<br>
+    </p>
+    <hr class="hr__">
+    <h3 class="big_font_ptitle white_gray text_center padding_right" id="text_appear">타겟 사용 부품 <span id="text_dia_fast">_</span></h3>
+    <p class="content text_left padding_right_md" id="text_appear">
+        ▶ 서보 모터 : 타겟의 움직임을 담당합니다.<br>
+        ▶ 조도센서 : 가상 탄환에 의한 피격을 감지하는 역할을 합니다.<br>
+        ▶ 블루투스 모듈 : 스마트폰과 연결하여 타겟에게 원격 가동 명령을 내릴 수 있습니다.<br>
+        ▶ DFPlayerMini : 재생할 효과음 파일을 담아두는 메모리 역할을 합니다.<br>
+        ▶ 소형 스피커 : DFPlayerMini에 담긴 효과음을 재생합니다.<br>
+    </p>
+    <p class="content text_center padding_right" id="text_appear">
+        <br><br><br><br><br><br><br><span>◈</span><br><br>
+    </p>
+
+
+    <h3 class="big_font_ptitle white_gray text_center padding_right" id="text_appear">설계 : FILE_END <span id="text_dia_fast">_</span></h3>
+    <p class="content text_center padding_right" id="text_appear">
+        [ WE_ARE_ANONYMOUS ]<br>
+        <br><br><br><br><br><br><br><span>◈</span><br><br><br><br>
+    </p>
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------- -->
+
+</body>
+</html>

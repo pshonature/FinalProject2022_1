@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>아두이노 과제</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top">Team C</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#services">Project</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Arduino</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Plans</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#codes">Codes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#html">HTML & CSS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#team">Members</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Process">Process</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Epilogue">Review</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reference">References</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container">
+            <div class="masthead-subheading">Ultrasonic Automatic <span style="color:#ffc800">FAN</span>-tastic!</div>
+            <div class="masthead-heading text-uppercase">아두이노를 활용한 <br>초음파 자동 선풍기 </div>
+            <a class="btn btn-primary btn-xl text-uppercase" href="#team">Team C</a>
+        </div>
+
+    </header>
+    <!-- Services-->
+    <section class="page-section" id="services">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">프로젝트 소개</h2>
+                <h3 class="section-subheading text-muted">아두이노 수업에서 가장 흥미로운 부품은 초음파센서였습니다.<br>
+                    가청 범위 밖의 주파수로 거리를 측정 할 수 있으므로 활용 범위가 무한적이라 생각되었습니다.</h3>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <!-- <i class="fas fa-circle fa-stack-2x text-primary"></i> -->
+                        <img width="100" src="./assets/img/handfree.png" alt="">
+                        <!-- <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i> -->
+                    </span>
+                    <h4 class="my-3">Easy</h4>
+                    <p class="text-muted" style="text-align: left;">장시간을 책상에서 보내는 직장인, 학생은 물론이고 아기에게 손을 뗄 틈이 없는 주부 또한 유용하게 사용 할 수 있는 자동 선풍기를
+                        만들어보았습니다.
+                        한창 일에 집중 하고 있을 때 선풍기 전원을 켜는 사소한 행위 조차도 번거로울 때가 있습니다.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <img width="100" src="./assets/img/jarvis.png" alt="">
+                    </span>
+                    <h4 class="my-3">Cool</h4>
+                    <p class="text-muted" style="text-align: left;">초음파 센서를 통해 사람의 착석 여부를 판별하여 자동으로 선풍기가 켜진다는 것은 어렸을 적 상상하던 스마트 데스크, 스마트 홈의
+                        일부분이였습니다. 저희가 도전했던 자동 선풍기는 아이언맨의 자비스의 원시적인 형태가 아닐까 생각해봅니다.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <img width="100" src="./assets/img/eco.png" alt="">
+                    </span>
+                    <h4 class="my-3">Eco Friendly</h4>
+                    <p class="text-muted" style="text-align: left;">자리를 비울 시 팬이 자동으로 꺼지기 때문에 집밖을 나서서 내가 선풍기를 껐나하는 걱정이 없어집니다.
+                        불필요한 전력소모 또한 막을 수 있어 경제적이고 친환경적 입니다.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <img
+                src="https://img.freepik.com/free-photo/pleasant-looking-dark-haired-handsome-man-wearing-casual-t-shirt-with-towel-his-shoulder-sitting-table-with-laptop-holding-baby-girl-hands-giving-baby-water-drink_176532-15512.jpg">
+            <img width="626"
+                src="https://media.istockphoto.com/photos/man-suffers-from-heat-in-the-office-or-at-home-picture-id1153607558?k=20&m=1153607558&s=612x612&w=0&h=tv8fM9Br2-9VoxL6efnx-thWRYw4k8eTyFPwU_it0l8=">
+        </div>
+
+    </section>
+    <!--필요 부품-->
+    <section class="page-section bg-light" id="portfolio">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">필요 부품</h2>
+                <h3 class="section-subheading text-muted">클릭 시 주요 부품에 관한 설명으로 이동합니다.</h3>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 1-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src=".\assets\img\slideswitch.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">슬라이드 스위치</div>
+                            <div class="portfolio-caption-subheading text-muted">Slide Switch</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 2-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src=".\assets\img\ultrasonic.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">초음파 센서</div>
+                            <div class="portfolio-caption-subheading text-muted">Ultrasonic Sensor</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 3-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src=".\assets\img\dcmotor.webp" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">DC 모터</div>
+                            <div class="portfolio-caption-subheading text-muted">DC Motor</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                    <!-- Portfolio item 4-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src=".\assets\img\dht11.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">온습도 모듈</div>
+                            <div class="portfolio-caption-subheading text-muted">DHT11</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                    <!-- Portfolio item 5-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src=".\assets\img\lcd.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">LCD 모듈</div>
+                            <div class="portfolio-caption-subheading text-muted">Liquid Crystal Display</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 6-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src=".\assets\img\switch.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">스위치</div>
+                            <div class="portfolio-caption-subheading text-muted">Switch</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 100px;">
+                <h2 class="section-heading text-uppercase">Tinkercad Connection</h2>
+                <h3 class="section-subheading text-muted">아두이노 전체 회로도</h3>
+            </div>
+            <img src=".\assets\img\ard_conn.png"/>
+        </div>
+    </section>
+    <!-- 동작개념도-->
+    <section class="page-section" id="about">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">전체 동작 개념도</h2>
+                <h3 class="section-subheading text-muted">자동 수동 변환 가능한 초음파 센서를 이용한 선풍기 제작</h3>
+            </div>
+            <ul class="timeline">
+                <li>
+                    <div class="timeline-image"><img class="rounded-circle img-fluid" src=".\assets\img\slideswitch.jpg"
+                            alt="..." /></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>Step 1</h4>
+                            <h4 class="subheading">모드 설정</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="text-muted">슬라이드 스위치를 이용해 자동/ 수동 모드 선택</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-image"><img class="rounded-circle img-fluid" src=".\assets/img/dcmotor.webp"
+                            alt="..." /></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>Step 2</h4>
+                            <h4 class="subheading">팬이 부착된 DC 모터 가동</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="text-muted">스위치 값 수동 선택시 전원 버튼과 같이 선풍기 가동됨</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-image"><img class="rounded-circle img-fluid" src=".\assets\img\ultrasonic.jpg"
+                            alt="..." /></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>Step 3</h4>
+                            <h4 class="subheading">초음파 센서로 거리 측정</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="text-muted">스위치 값 자동 선택시 착석만 하면 초음파 센서가 값을<br> 읽어 즉시 선풍기가 가동됨</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/dht11.jpg"
+                            alt="..." /></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>Also</h4>
+                            <h4 class="subheading">온습도 모듈 DHT11</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="text-muted">스위치를 누르면 LCD 패널에 측정된 온습도 값이 출력됨</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-image">
+                        <h4>
+                            Ultrasonic
+                            <br />
+                            Automatic
+                            <br />
+                            FAN-tastic!
+                        </h4>
+                    </div>
+                </li>
+            </ul>
+            <div class="text-center" style="margin-top: 100px;">
+                <h2 class="section-heading text-uppercase">Tinkercad Connection</h2>
+                <h3 class="section-subheading text-muted">아두이노 전체 회로 실물 사진</h3>
+            </div>
+            <img style="text-align: center;" src=".\assets\img\img.jpg"/>
+    </section>
+    <!-- codes -->
+    <section class="page-section bg-light" id="codes">
+        <div class="container codes">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Arduino Sketch</h2>
+                <h3 class="section-subheading text-muted">아두이노 회로를 가동시키기 위한 실제 코드</h3>
+            </div>
+            <img width="800" src=".\assets\img\sketch1.PNG">
+            <img width="800" src=".\assets\img\sketch2.PNG">
+            <img width="800" src=".\assets\img\sketch3.PNG">
+            <img width="800" src=".\assets\img\sketch4.PNG">
+        </div>
+        </div>
+    </section>
+    <!-- 시연동영상 -->
+    <section class="page-section bg-light" id="codes">
+        <div class="container codes">
+            <!-- <div class="text-center">
+                <h2 class="section-heading text-uppercase">과정 동영상</h2>
+                <h3 class="section-subheading text-muted">과정 촬영본입니다</h3>
+            </div>
+            <div class="vid" style="display: flex;">
+            <video src=".\assets\vid\vid1.mp4" width="500" controls >이 브라우저는 비디오를 지원하지 않습니다.</video>
+            <video src=".\assets\vid\vid2.mp4" width="500" controls >이 브라우저는 비디오를 지원하지 않습니다.</video> -->
+        </div>
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">완성본 시연 동영상</h2>
+            <h3 class="section-subheading text-muted">실제 구동 영상 촬영본입니다</h3>
+            <video src=".\assets\vid\Ard_vid.mp4" width="1000" controls >이 브라우저는 비디오를 지원하지 않습니다.</video>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- HTML & CSS -->
+    <section class="page-section bg-light" id="html">
+        <div class="container codes">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">HTML & CSS</h2>
+                <h3 class="section-subheading text-muted">웹 보고서 작성 코드</h3>
+            </div>
+            <h3>초안</h3>
+            <img width="800" src=".\assets\img\oven.PNG">
+            <h3>디자인 변경 전</h3>
+            <img width="800" src=".\assets\img\before.PNG">
+            <h3>폴더 구성</h3>
+            <img width="800" src=".\assets\img\html5.PNG">
+            <h3>HTML head</h3>
+            <img width="800" src=".\assets\img\html1.PNG">
+            <h3>HTML body > nav</h3>
+            <p class="large text-muted">각 section의 ID 값으로 이동, 상단 고정<br>현재 보고 있는 위치 색상으로 표시</p>
+            <img width="800" src=".\assets\img\html2.PNG">
+            <h3>HTML body section</h3>
+            <p class="large text-muted">코드가 길어져 가독성을 높이기 위해 section태그로 나누어 정리, 주석 처리</p>
+            <img width="800" src=".\assets\img\html3.PNG">
+            <h3>조원 소개</h3>
+            <img width="800" src=".\assets\img\html4.PNG">
+        </div>
+        </div>
+    </section>
+    <!-- Team-->
+    <section class="page-section bg-light" id="team">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
+                <h3 class="section-subheading text-muted">동의과학대 인공지능 컴퓨터 정보과 1학년</h3>
+            </div>
+            <div class="row">
+                <div class="col-lg-4_1">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="assets/img/홍서현.jpg" alt="..." />
+                        <h4>홍서현</h4>
+                        <p class="text-muted">웹보고서, 프로그래밍</p>
+                        <p class="text-muted">조장으로 전반적인 웹 보고서를 주로 담당 하였습니다.<br>아두이노 회로도와 스케치 코드를 제작하였습니다.<br></p>
+                    </div>
+                </div>
+                <div class="col-lg-4_1">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="assets/img/배용빈.jpg" alt="..." />
+                        <h4>배용빈</h4>
+                        <p class="text-muted">회로 구성, 공작</p>
+                        <p class="text-muted">회로도 제작에 참여하고, 실제 회로를 구성하였습니다.<br>모드 전환 관련 프로그래밍을 했습니다.</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-4_1">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="assets/img/신창욱.jpg" alt="..." />
+                        <h4>신창욱</h4>
+                        <p class="text-muted">PPT, 회로 구성</p>
+                        <p class="text-muted">실제 회로 구성에 참여하였습니다.<br>PPT 제작을 담당하였습니다.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4_1">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="assets/img/정원중.jpg" alt="..." />
+                        <h4>정원중</h4>
+                        <p class="text-muted">자료 조사</p>
+                        <p class="text-muted">자료 조사 및 필요 이미지 수집을 담당하였습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- process -->
+    <section class="page-section bg-light" id="Process">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">프로젝트 과정</h2>
+            <h3 class="section-subheading text-muted">가로 스크롤로 확인해보세요!</h3>
+        </div>
+        <div class="container" height="200"style="overflow: scroll; display:flex;">
+            <!-- 슬라이드 -->
+            <img height="436" style="margin-right:30px; margin-left:1500px" src=".\assets\img\p1.jpg">
+            <img height="436" style="margin-right:30px;" src=".\assets\img\p2.jpg">
+            <img height="436" style="margin-right:30px;" src=".\assets\img\p3.jpg">
+            <img height="436" style="margin-right:30px;" src=".\assets\img\p4.jpg">
+            <img height="436" style="margin-right:30px;" src=".\assets\img\p5.jpg">
+        </div>
+    </section>
+    <!-- epilogue-->
+    <section class="page-section bg-light" id="Epilogue">
+        <div class="container">
+            <table class="review_table">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">프로젝트 후기</h2>
+                    <h3 class="section-subheading text-muted">--------</h3>
+                </div>
+                <tbody>
+                    <tr>
+                        <td>홍서현</td>
+                        <td><p class="text-muted">시험과 과제가 겹친다는 것이 이런 것인지 몰랐습니다.<br> 
+                             아두이노 키트를 구매하지 않고 수업시간에 배운 것들 위주로 구성하여본 프로젝트라 다른 팀에 비해 난이도가 쉬워 보일 수 있다고 생각합니다. <br>
+                             처음에는 주제 선정을 너무 성급하게 한 것이 아닌가 걱정도 했지만, 막상 작업을 시작해보니 슬라이드 스위치나 DC 모터 같은 작은 추가적인 부품 하나를 추가하는 것도 프로그래밍하기에는 고난이었습니다.<br><br>
+                             코드를 짜기 위해서는 부품에 대해 이해하는 것이 우선이라는 점을 알게 되었습니다. <br>
+                             예로 들면 수업시간에 배운 서보모터는 360도 회전이 되지 않아 각도를 조절하였었는데 DC 모터는 HIGH만 되면 끝없이 회전합니다. 아두이노만의 전력 공급으로는 팬 정도의 무게도 회전시키기에 부족합니다. 
+                             슬라이드 스위치는 보통 전원 버튼으로 쓰여 HIGH, LOW로 코드를 짜는데 저희 팀처럼 모드 전환을 시키기 위해서는 if 문 실행코드 내부에서 DC 모터 함수를 실행시키는 생각의 전환이 필요하였습니다.
+                              <br>회로도와 코드를 완벽하게 짜놓고 실제 회로를 연결하기 시작하니 과정 중에 작동이 되지 않아도 잘못 꽂은 핀이 있는지, 부품이 정상 작동하는 것인지만 확인하면 되어서 편했습니다. <br><br>
+                              무작정 시작했던 HTML 코드가 길어지니 CSS로 스타일을 주는 것이 너무 어려웠습니다. 왜 적은 대로 실행이 안 되는지 이해할 수가 없었습니다. <br>
+                              웹 보고서라 세로로 길게 읽을 수 있는 긴 형식으로 만들고 싶었습니다. 편의를 위해서는 네비게이션 바에서 id 값으로 이동할 수 있게 만드는 것이 필수적이라 열심히 만들었던 코드를 다 엎기로 하였습니다. <br>
+                              마음을 비우고 다시 header, body, footer로 나뉜 코드를 다시 세부적으로 section 별로 정리하게 되었습니다. <br>
+                              나름 오븐을 이용해 프론트를 계획적으로 작성했다고 생각했었는데, 이러한 과정을 겪으며 훨씬 더 세부적인 계획을 세워야 했음을<br> 깨달았습니다.<br><br> 
+                              조장으로서 부족한 점이 많아 수줍음이 많은 조원을 끌고 가는 것이 어려웠습니다. <br>조별 과제인 만큼 더 크고 대단한 프로젝트를 하고 싶었지만, 
+                              조원들의 의지가 부족한 것 같아 불평이 생기기도 했었습니다.<br> 생각을 바꿔 동기부여를 주려고 노력하니 잘 따라와 주어 끝까지 힘을 내서 마무리할 수 있었습니다.<br>
+                               공부 외에도 배운 점이 많은 과제였습니다.
+                        </p></td>
+                    </tr>
+                    <tr>
+                        <td>배용빈</td>
+                        <td><p class="text-muted">제가 대학을 오면서 처음으로 팀으로 이런 과제를 해야한다는 것에 많은 부담을 느꼈습니다.
+                            그렇지만 조원들의 도움으로 어려운 것이 있다면 도와주고 모르는것이 있으면 알려주는 그런 팀에 들어와서 매우 좋았습니다. 
+                            제가 과제를하면서 많은 도움을 못드려서 매우 죄송스럽고 미안하는 생각을 많이 했던것같습니다.
+                            하지만 팀으로 하는 과제여서 그런지 서로의 의견을 얘기하고 받아들이고 부족한것은 서로 피드백을해주면서 프로젝트를 완성하는것이 좋았습니다.
+                            </p></td>
+                    </tr>
+                    <tr>
+                        <td>신창욱</td>
+                        <td><p class="text-muted">팀과제 프로젝트를 하면서 개인과제보다 훨씬 어렵고 
+                            맡은 임무에 성실하고 열심히 해야 다른팀원한테 피해를 안끼치고 프로젝트를 끝마쳐야 하기 때문에
+                            더욱더 노력하려고 했지만 개인사정으로 인해 학교 수업에 참여를 자주 못하여서 죄송스러운 마음이 많이 큽니다.
+                            그래도 조장께서 어려운부분과 팀원들이 함께 저를 도와 PPT를 만들고 자료 수집한 결과 나름 만족스러운 팀과제 프로젝트를 해낸거 같아
+                            뿌듯합니다. 처음 팀과제를 해보았는데 아쉬운 마음도 크고 더 잘하고 싶지만 이 프로젝트를 발판 삼아 앞으로 이런 과제들을 더욱 쉽게 수행해낼것 같습니다. 
+                            감사합니다.</p></td>
+                    </tr>
+                    <tr>
+                        <td>정원중</td>
+                        <td><p class="text-muted">다른 대학 다녀서 왔으나 작년에 코로나에 인해 개인과제 하다가 올해 처음으로 팀과제 프로젝트를 했을때 훨신 어렵고 많은 부담을 느껴지만 조원들이 도와주고 서로 협동해서 하니깐 훨씬 수월하게 과제가 된거 같아서 조원 들 한테 감사하다는 마음이 들며 이번 계기로 자기 개발이 된거 같다는 생각이 들어서 더욱 쉽게
+                            수행 할수 있다는 생각을 가지게 되어서 좋았습니다.</p></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            
+
+            
+        </div>
+    </section>
+    <!-- reference -->
+    <section class="page-section bg-light" id="reference">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Reference</h2>
+                <h3 class="section-subheading text-muted">Click link to download!</h3>
+                <!-- 슬라이드 -->
+            </div>
+            <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                <li class="nav-item"><a class="ref" href=".\files\sketch_arduinoProject.ino" >스케치 파일</a></li>
+                <li class="nav-item"><a class="ref" href=".\files\ard_conn.png" download="ard_conn.png">회로도</a></li>
+                <li class="nav-item"><a class="ref" href=".\files\IOT project_C조 .pptx" download="IOT project_C조">발표 PPT</a></li>
+                <li class="nav-item"><a class="ref" href=".\files\ArduinoProject.zip" download="ArduinoProject.zip">HTML & CSS</a></li>
+            </ul>
+            <p class="text-muted" style="margin-left:0">
+                참조 사이트<br>
+                css template: https://startbootstrap.com/<br>
+                온습도센서: https://m.blog.naver.com/3demp/220969833842<br>
+                슬라이드 스위치: https://eduino.kr/product/detail.html?product_no=243<br>
+                스위치: http://www.mcuboard.com/shop/goods/goods_view.php?&goodsno=17215<br>
+                DC 모터: http://itempage3.auction.co.kr/DetailView.aspx?itemno=B870973690<br>
+                초음파센서: https://kocoafab.cc/tutorial/view/65<br>
+                LCD 모듈: https://artsung410.tistory.com/43</p>
+        </div>
+    </section>
+    <!-- Footer-->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                    <a class="link-dark text-decoration-none" href="#!">Team C &copy; JUNE 2022</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Modals-->
+    <!-- 슬라이드 스위치-->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <h2 class="text-uppercase">슬라이드 스위치</h2>
+                                <img class="img-fluid d-block mx-auto" src="assets/conn/slide.png" alt="..." />
+                                <p>전류의 방향을 바꾸거나 전원을 켜고 끄는 용도로 사용할 수 있습니다.
+                                    DC모터 가동시 자동 또는 수동으로 모드를 변경하기 위해 사용하였습니다.
+                                   슬라이드 스위치는 세 개의 단자가 존재한다. 좌측부터 번호를 매겨 1번, 2번, 3번이라고 한다면 스위치를 좌측으로 이동시키면 1번괴 2번이 서로 연결되고, 우측으로 이동시키면 
+                                   2번과 3번이 서로 연결된다</p>
+                                
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                    type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 초음파 센서-->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <h2 class="text-uppercase">초음파 센서</h2>
+                                <img class="img-fluid d-block mx-auto" src="assets/conn/us.png" alt="..." />
+                                <p>소리는 물체의 진동에 의해 발생하고 공기를 통해 전달되는데 이를 음파라고 합니다.
+                                    초음파는 음파가 진동하는 것보다 더 많은 진동수를 가지며 사람은 인지하지 못하지만 돌고래나 박쥐는 초음파를 통해 장애물이나 사냥감을 찾아내는데 활용합니다.
+                                    초음파센서는 임의로 20kHz(킬로헤르츠)에서 200MHz(메가헤르츠) 대역의 초음파를 만들어내고 이를 통해 물체와의 거리를 측정할 수 있는 센서입니다.</p>
+                                
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                    type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    Close 
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- dc-->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <h2 class="text-uppercase">DC 모터</h2>
+                                <img class="img-fluid d-block mx-auto" src="assets/conn/dc.png" alt="..." />
+                                <p>직류(DC: Direct Current)를 전원으로 동작하는 전기모터로 직류모터라고도 합니다.
+                                    모터에 팬을 연결하고, 별도의 모터 쉴드 없이 제어가 가능합니다.
+                                    전류가 흐르는 방향으로 회전을 하기 때문에 포트의 출력을 제어하여 모터의 회전 방향을 결정할 수 있습니다.</p>
+                                
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                    type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- dht-->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <h2 class="text-uppercase">온습도 모듈</h2>
+                                <img class="img-fluid d-block mx-auto" src="assets/conn/dht11.png" alt="..." />
+                                <p>습도는 공기 중에 수증기가 포함된 정도로써 실생활에서는 상대 습도로 쓰입니다. 
+                                    온도라는 것은 원자 또는 분자가 가지고 있는 운동에너지의 크기를 말하며, 압력, 저항등의 물리량으로 변환하여 나타냅니다.
+                                    온도는 따뜻함과 차가움을 구별하는 수치이고 온습도 센서는 주변의 온도를 측정합니다.</p>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                    type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- lcd-->
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <h2 class="text-uppercase">LCD 모듈</h2>
+                                <img class="img-fluid d-block mx-auto" src="assets/conn/lcd.png" alt="..." />
+                                <p>액체처럼 유체의 성질을 가지면서 고체처럼 광학적 성질을 가지는 물질입니다.
+                                    또한 액정은 고체표면에 액정이 특정 방향으로 정렬할 수도 있어, 전기적 신호를 가해 원하는 방향으로 배열하여 빛을 투과시키거나 차단시킬 수 있습니다.LCD는 앞면에 액정을 두어 전기신호에 따라 빛을 차단하거나 통과시키는 방식으로
+                                    문자나 숫자 등을 표시하는 장치입니다.</p>
+                            
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                    type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 스위치-->
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <h2 class="text-uppercase">Project Name</h2>
+                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <img class="img-fluid d-block mx-auto" src="assets/conn/switch.png" alt="..." />
+                                <p>스위치는 전자제품의 전원을 켜거나 끌 때,  혹은 전자기기를 조작할 때
+                                    사용하는 제어 장치입니다. 보통 여러종류의 스위치가 존재하지만 스위치는 크게 2가지 타입으로 나뉘는데
+                                    스위치가 동작했을때 전류가 흐르는 타입과 전류가 끊어지는 타입이 있습니다. 스위치는 전자기기를 조작할때 많이 사용됩니다.</p>
+                                
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                    type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script> 
+</body>
+
+</html>

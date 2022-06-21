@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    height: 200vh;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul li {
+    list-style: none;
+}
+
+.border-radius {
+    border-radius: 10px;
+}
+
+/* nav */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    background-color: rgb(251,251,251, 0.9);
+    border-bottom: 2px solid gray;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+}
+
+nav #devTitle {
+    position: absolute;
+    left: 25px;
+    top: 10px;
+    color: rgb(6, 199, 85);
+}
+
+.menu {
+    display: flex;
+    text-align: center;
+}
+
+.menu li {
+    padding: 10px 50px;
+    border-bottom: 3px solid rgb(251, 251, 251, 0);
+}
+
+.menu li:hover {
+    border-bottom: 2px solid rgb(6, 199, 85);
+    opacity: 0.7;
+}
+
+#foremBorder {
+    border-bottom: 2px solid rgb(6, 199, 85);
+    opacity: 0.7;
+}
+
+.icon {
+    font-size: 40px;
+    padding-right: 40px;
+}
+
+/* nav end */
+
+
+.section1 h1 {
+    display: inline-block;
+    font-size: 50px;
+    margin-bottom: 0;
+}
+
+
+.section1 i{
+    margin-top: 200px;
+    margin-left: 200px;
+    font-size: 60px;
+    /* background-color: rgb(6, 199, 85, 0.3); */
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+.section1 h2 {
+    margin-left: 200px;
+    font-size: 35px;
+    font-weight: 400;    
+}
+
+main ul {
+    float: left;
+    margin: 70px auto ;
+    /* margin-left: 50px; */
+    /* 해상도에 따른 margin-left 조정 필요성 5%?  */
+}
+
+.fromList li {
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    margin-left: 80px;
+    /* padding: 120px; */
+
+}
+
+.title {
+    display: inline-block;
+    font-size: 20px;
+    margin: 25px;
+    margin-bottom: 12px;
+    padding: 8px;
+    background-color:rgb(185, 252, 207);
+    border-radius: 20px;
+}
+
+.title2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-left: 25px;
+}
+
+.list {
+    color: rgb(102,102,102);
+    margin: 25px;
+    border-bottom: 1px solid black;
+}
+
+.imgList {
+    margin: 0 auto;
+    width: 400px;
+    height: 300px;
+    display: flex;
+    border-radius: 0px 0px 25px 25px;
+}
+
+.fromList li:hover {
+    background-color:rgb(238,238,238);
+    transition: 0.5s;
+    
+}
+

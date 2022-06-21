@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../anonymous_css.css">
+    <title>Anonymous Report</title>
+
+    <script>
+        function btn_plus_icon()
+        {
+            var target = document.getElementById("menu_1_iframe");
+   
+            target.style.display = 'none';
+            setTimeout(() => {
+                target.style.display = 'block';
+            }, 0); }
+    </script>
+</head>
+<body>
+<!-- -------------------------------------------------------------------------------------------------- -->
+<!-- Title Main -->
+
+    <nav>
+        <ul class="nav">
+            <li class="black text_center text_li_title_size"><strong>INDEX</strong></li>
+            <hr class="nav">
+            <a href="../index.html"><li class="btn black text_center text_li_size symbol"><strong>타이틀</strong></li></a>
+            <a href="./menu_team.html"><li class="btn black text_center text_li_size symbol select"><strong>팀원 소개</strong></li></a>
+            <a href="./menu_info.html"><li class="btn black text_center text_li_size symbol"><strong>작품 개요</strong></li></a>
+            <a href="./menu_play.html"><li class="btn black text_center text_li_size symbol"><strong>시연</strong></li></a>
+            <a href="./menu_design.html"><li class="btn black text_center text_li_size symbol"><strong>설계</strong></li></a>
+            <a href="./menu_review.html"><li class="btn black text_center text_li_size symbol"><strong>후기</strong></li></a>
+            <a href="./menu_data.html"><li class="btn black text_center text_li_size symbol"><strong>자료실</strong></li></a>
+            <p class="copyright"><br><br><br><br><br>© 2022 [ TEAM_ANONYMOUS ]<br>All Rights Reserved.</p>
+        </ul>
+    </nav>
+
+    <h1 name="title_element" class="white text_center text_big lower_margin padding_right">ANONYMOUS_<span class="text_gray">REPORT</span></h1>
+    <h2 name="title_element" class="white text_center lower_margin padding_right" id="sub_title_anim">[ 팀원 소개 ]</h2><hr class="title margin_right" id="hr_anim">
+
+<!-- -------------------------------------------------------------------------------------------------- -->
+<!-- Content -->
+
+    <div class="box_flex">
+    <ul class="menu_1_content padding_right">
+        <div class="box_flex">
+            <li class="white" id="menu_1_main_text"><span class="white menu_1_name"><strong>전종민</strong></span>
+                <span class="black bold menu_1_job"><b>발표 / 하드웨어 리드개발 / 자료조사&기획</b></span></li>
+            <a href="../image/info_jjm.jpg" target="team_info">
+                <button onclick="btn_plus_icon()" type="button" class="plus_btn" id="menu_1_plus_icon"><img class="menu_1_plus_icon" src="../image/icon_plus.png">
+            </a>
+        </div>
+        <div class="box_flex">
+            <li class="white" id="menu_1_main_text"><span class="white menu_1_name"><strong>장현준</strong></span>
+                <span class="black bold menu_1_job"><b>웹 / 소프트웨어 리드개발 / 자료조사&기획</b></span></li>
+            <a href="../image/info_jhj.jpg" target="team_info">
+                <button onclick="btn_plus_icon()" type="button" class="plus_btn" id="menu_1_plus_icon"><img class="menu_1_plus_icon" src="../image/icon_plus.png">
+            </a>
+        </div>
+        <div class="box_flex">
+            <li class="white" id="menu_1_main_text"><span class="white menu_1_name"><strong>신재민</strong></span>
+                <span class="black bold menu_1_job"><b>기록 담당 / PPT 제작 / 자료조사&기획</b></span></li>
+            <a href="../image/info_sjm.jpg" target="team_info">
+                <button onclick="btn_plus_icon()" type="button" class="plus_btn" id="menu_1_plus_icon"><img class="menu_1_plus_icon" src="../image/icon_plus.png">
+            </a>
+        </div>
+        <div class="box_flex">
+            <li class="white" id="menu_1_main_text"><span class="white menu_1_name"><strong>강지원</strong></span>
+                <span class="black bold menu_1_job"><b>하드웨어 개발 / 자료조사&기획</b></span></li>
+            <a href="../image/info_gjw.jpg" target="team_info">
+                <button onclick="btn_plus_icon()" type="button" class="plus_btn" id="menu_1_plus_icon"><img class="menu_1_plus_icon" src="../image/icon_plus.png">
+            </a>
+        </div>
+        <div class="box_flex">
+            <li class="white" id="menu_1_main_text"><span class="white menu_1_name"><strong>김주완</strong></span>
+                <span class="black bold menu_1_job"><b>하드웨어 개발 / 자료조사&기획</b></span></li>
+            <a href="../image/info_kjw.jpg" target="team_info">
+                <button onclick="btn_plus_icon()" type="button" class="plus_btn" id="menu_1_plus_icon"><img class="menu_1_plus_icon" src="../image/icon_plus.png">
+            </a>
+        </div>
+    </ul>
+
+
+    <iframe class="team_info_disp" id="menu_1_iframe" src="../image/info_unknown.jpg" frameborder="0" name="team_info"></iframe>
+</div>
+
+<!-- -------------------------------------------------------------------------------------------------- -->
+
+</body>
+</html>

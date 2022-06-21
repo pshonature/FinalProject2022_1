@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../code_css.css">
+</head>
+<body>
+  <H1 class="title">|&nbsp;&nbsp;&nbsp;&nbsp;ARDUINO_CODE&nbsp;&nbsp;&nbsp;&nbsp;|</H1><hr class="title_hr">
+    <p>
+            <span class="include">#include</span> &lt;<span class="obj">SoftwareSerial</span>.h&gt;<br>
+            <span class="include">#include</span> <span class="blue">"DFRobotDFPlayerMini.h"</span><br>
+            <span class="include">#include</span> &lt;<span class="obj">LiquidCrystal</span>.h&gt;<br><br>
+            <span class="obj">LiquidCrystal</span> LCD(13,12,5,4,3,2);<br>
+            <span class="include">#define</span> laser 7          <span class="coment">//레이저 모듈 핀설정</span><br>
+            <span class="include">#define</span> button 6        <span class="coment">//버튼 핀 설정</span><br>
+            <span class="include">#define</span> vibe 8        <span class="coment">//진동센서 핀 설정</span><br>
+            <span class="var">int</span> vibelimit = 1022; <span class="coment">//진동센서 민감도</span><br>
+            <span class="var">int</span> buttonState= 0;    <span class="coment">//현재 버튼값 초기화</span><br>
+            <span class="var">int</span> lastButtonState = 0; <span class="coment">//과거 버튼값 초기화</span><br>
+            <span class="var">int</span> bullet = 8;         <span class="coment">//총알 갯수 초기화</span><br><br>
+            
+            <span class="obj">SoftwareSerial</span> df_player_Module(10, 11); <span class="coment">// DFPlayer 시리얼 통신용 객체 생성 >> 디지털 핀 두개 선택</span><br>
+            DFRobotDFPlayerMini df_player; // DFPlayer 객체 생성<br>
+            <span class="var">bool</span> processing = <span class="var">false</span>;<br><br><br>
+            
+            
+            <span class="var">void</span> <span class="include">setup</span>() {<br><br>
+              
+              <span class="orange">pinMode</span>(button,<span class="var">INPUT</span>);  <span class="coment">//버튼 입력모드</span><br>
+              <span class="orange">pinMode</span>(laser, <span class="var">OUTPUT</span>); <span class="coment">//레이저 출력모드</span><br>
+              <span class="orange">pinMode</span>(vibe,<span class="var">INPUT</span>);    <span class="coment">//진동센서 입력모드</span><br>
+              <span class="obj">Serial</span>.<span class="orange">begin</span>(9600);<br>
+              df_player_Module.<span class="orange">begin</span>(9600); <span class="coment">//df플레이어 모듈</span><br>
+              LCD.<span class="orange">begin</span>(16,2);        <span class="coment">//lcd 16,2설정</span><br><br>
+             
+              <span class="include">if</span> (!df_player.<span class="orange">begin</span>(df_player_Module), <span class="var">false</span>)<br>
+              {<br>
+                <span class="coment">// Serial.println(F("Unable to begin :"));</span><br>
+                <span class="coment">// Serial.println(F("1.Please recheck the connection!"));</span><br>
+                <span class="coment">// Serial.println(F("2.Please insert the SD card!"));</span><br>
+                <span class="coment">// while(true);</span><br>
+              }<br><br>
+
+              <span class="orange">delay</span>(1);<br>
+              df_player.volume(20); <span class="coment">// 볼륨 지정</span><br>
+              df_player.setTimeOut(500); <span class="coment">//시리얼 통신용 타임아웃 시간 지정</span><br><br>
+            
+            }<br><br><br>
+            
+            
+            
+            <span class="var">void</span> <span class="include">loop</span>() {<br><br>
+                      
+              <span class="include">while</span> (bullet != 0) { <span class="coment">//총알이 0발 될때까지 반복</span><br>
+                      LCD.<span class="orange">setCursor</span>(0,0);                             <span class="coment">//lcd커서를 0,0으로 두고</span><br>
+                      LCD.<span class="orange">print</span>("bullet :"); LCD.<span class="orange">print</span>(bullet);       <span class="coment">//lcd</span><br><br>
+                
+                 buttonState = <span class="orange">digitalRead</span>(button);    <span class="coment">//푸쉬버튼값 읽기</span><br>
+                <span class="include">if</span> (buttonState != lastButtonState) { <span class="coment">//푸쉬버튼의 상태가 변했다면 ex) HIGH > LOW or LOW > HIGH</span><br><br>
+            
+                  <span class="include">if</span> (buttonState == <span class="var">HIGH</span>) {   <span class="coment">//바뀐값이 HIGH일때</span><br>
+                    shoot(3);                   <span class="coment">//발사음(0003.mp3)출력하고</span><br>
+                    <span class="orange">digitalWrite</span>(laser, <span class="var">HIGH</span>);  <span class="coment">//레이저를</span><br>
+                    <span class="orange">delay</span>(100);                 <span class="coment">//0.1초동안 HIGH상태로 바꾸고</span><br>
+                    <span class="orange">digitalWrite</span>(laser, <span class="var">LOW</span>);   <span class="coment">//다시 LOW로 바꾼다.</span><br>
+                    bullet--;                   <span class="coment">//총알을 -1한다.</span><br><br>
+                           
+                <span class="obj">Serial</span>.<span class="orange">println</span>(bullet);         <span class="coment">//시리얼모니터로 총알읽기</span>  <br>                
+                  }<br>
+                  <span class="orange">delay</span>(50);                   <span class="coment">// 다음 발사 시간까지의 대기시간</span><br>
+                }<br>
+                lastButtonState = buttonState; <span class="coment">//과거값 갱신</span><br>
+              }<br>
+                  LCD.<span class="orange">clear</span>();                  <span class="coment">//lcd초기화</span><br>
+                  LCD.<span class="orange">setCursor</span>(0,0);           <span class="coment">//커서 0,0으로 이동</span><br>
+                  LCD.<span class="orange">print</span>("bullet :");LCD.<span class="orange">print</span>(bullet);    <span class="coment">//총알개수 출력</span><br>
+                  buttonState = <span class="orange">digitalRead</span>(button);    <span class="coment">//푸쉬버튼값 읽기</span><br><br>
+                  
+                <span class="include">if</span> (buttonState != lastButtonState) { <span class="coment">//푸쉬버튼의 상태가 변했다면 ex) HIGH > LOW or LOW > HIGH</span><br>
+                  <span class="include">if</span> (buttonState == <span class="var">HIGH</span>)    <span class="coment">//바뀐값이 HIGH일때</span>    <br>    
+                           shoot(1);          <span class="coment">//빈총알소리(0001.mp3)출력</span><br><br>
+                  
+                }<br>
+                  lastButtonState = buttonState; <span class="coment">//과거값 갱신</span><br><br>
+                  
+                  <span class="include">if</span> (<span class="orange">digitalRead</span>(vibe) == <span class="var">HIGH</span>) { <span class="coment">//진동감지센서로 진동감지 후</span><br><br>
+            
+                  shoot(2);     <span class="coment">//재장전소리(0002.mp3)출력</span><br>
+                  bullet = 8;   <span class="coment">//재장전</span><br><br>
+            
+              }   <br><br>
+                  
+                                
+              }<br><br>
+            
+              <span class="var">void</span> shoot (<span class="var">int</span> num) {<br>
+                df_player.play(num); <span class="coment">//mp3출력 함수</span><br>
+              }
+    </p>
+</body>
+</html>

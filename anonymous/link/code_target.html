@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../code_css.css">
+</head>
+<body>
+  <H1 class="title">|&nbsp;&nbsp;&nbsp;&nbsp;ARDUINO_CODE&nbsp;&nbsp;&nbsp;&nbsp;|</H1><hr class="title_hr">
+    <p>
+     
+        <span class="include">#include</span> &lt;<span class="obj">Servo</span>.h&gt;<br>
+        <span class="include">#include</span> &lt;<span class="obj">SoftwareSerial</span>.h&gt;<br>
+        <span class="include">#include</span> <span class="blue">"DFRobotDFPlayerMini.h"</span><br>
+        <span class="include">#define</span> SERVO_PIN 8<br>
+        <span class="include">#define</span> RX 2<br>
+        <span class="include">#define</span> TX 3<br><br>
+        
+        <span class="coment">//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////</span><br><br><br><br>
+        <span class="coment">/* VAR */</span><br><br>
+        
+        <span class="obj">Servo</span> servo;<br>
+        <span class="obj">SoftwareSerial</span> df_player_Module(10, 11); <span class="coment">// DFPlayer 시리얼 통신용 객체 생성 >> 디지털 핀 두개 선택</span><br>
+        <span class="obj">SoftwareSerial</span> bt(RX,TX);<br>
+        DFRobotDFPlayerMini df_player; <span class="coment">// DFPlayer 객체 생성</span><br>
+        <span class="var">int</span> servo_angle = 0; <span class="coment">// 5º ~ 175º 사이 제어 권장</span><br>
+        <span class="var">int</span> servo_delay = 10;<br>
+        <span class="var">bool</span> servo_going_zero = <span class="var">false</span>;<br>
+        <span class="var">int</span> light_power = 0;<br>
+        <span class="var">bool</span> processing = <span class="var">false</span>;<br><br>
+        
+        <span class="coment">//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////</span><br>
+        <span class="coment">/* Function */</span><br><br>
+        
+        <span class="var">void</span> spin_motor() <span class="coment">// 모터를 회전시키는 함수</span><br>
+        {<br>
+          <span class="coment">//  servo.write(0); >> 정방향으로 최고속도로 회전(0에 가까울 수록 정방향 최고속도, 180에 가까울 수록 역방향 최고속도)</span><br><br>
+        
+            <span class="include">if</span>(servo_going_zero == <span class="var">false</span>)<br>
+            {<br>
+              servo_angle++;<br>
+              servo.<span class="orange">write</span>(servo_angle);<br>
+              <span class="orange">delay</span>(servo_delay);<br>
+              <span class="include">if</span>(servo_angle >= 180) servo_going_zero = <span class="var">true</span>;<br>
+            }<br>
+            <span class="include">else</span><br>
+            {<br>
+              servo_angle--;<br>
+              servo.<span class="orange">write</span>(servo_angle);<br>
+              <span class="orange">delay</span>(servo_delay);<br>
+              <span class="include">if</span>(servo_angle &lt;= 0) servo_going_zero = <span class="var">false</span>;<br>
+            }<br>
+        }<br><br>
+        
+        <span class="var">void</span> light_sensor() <span class="coment">// 조도센서 레이저 감지 함수</span><br>
+        {<br>
+          light_power = <span class="orange">analogRead</span>(A1);<br>
+          light_power = <span class="orange">map</span>(light_power,0,1024,0,100);<br>
+          <span class="obj">Serial</span>.<span class="orange">println</span>(light_power);<br><br>
+        
+          <span class="include">if</span>(light_power > 77)<br>
+          {<br>
+            is_hit();<br>
+          }<br>
+          <span class="include">else</span><br>
+          {<br>
+            <span class="coment">//digitalWrite(TEST_LED, LOW);</span><br>
+          }<br>
+        }<br><br>
+        
+        <span class="var">void</span> is_hit()<br>
+        {<br>
+          df_player.play(1); <span class="coment">// mp3 파일 폴더의 1번 파일 재생</span><br>
+          <span class="orange">delay</span>(1000);<br>
+        }<br><br>
+        
+        <span class="var">void</span> cmd_ctrl(<span class="var">char</span> cmd)<br>
+        {<br>
+          <span class="include">switch</span>(cmd)<br>
+          {<br>
+            <span class="coment">/******************************************/</span><br>
+            <span class="coment">// 프로세싱 시작</span><br>
+            <span class="include">case</span><span class="var">'g'</span>:<br>
+                df_player.play(2);<br>
+                processing = <span class="var">true</span>;<br>
+                <span class="coment">//digitalWrite(TEST_LED, HIGH);</span><br>
+                <span class="include">break</span>;<br>
+            <span class="include">case</span><span class="var">'G'</span>:<br>
+                df_player.play(2);<br>
+                processing = <span class="var">true</span>;<br>
+                <span class="coment">//digitalWrite(TEST_LED, HIGH);</span><br>
+                <span class="include">break</span>;<br>
+                <span class="coment">/******************************************/</span><br>
+                <span class="coment">// 프로세싱 정지</span><br>
+            <span class="include">case</span><span class="var">'s'</span>:<br>
+                processing = <span class="var">false</span>;<br>
+                //digitalWrite(TEST_LED, LOW);<br>
+                <span class="include">break</span>;<br>
+            <span class="include">case</span><span class="var">'S'</span>:<br>
+                processing = <span class="var">false</span>; <br>
+                //digitalWrite(TEST_LED, LOW);<br>
+                <span class="include">break</span>;<br>
+                <span class="coment">/******************************************/</span><br>
+                <span class="coment">// 파일 확인용 랜덤 전체 재생</span><br><br>
+            
+            <span class="include">case</span><span class="var">'A'</span>:<br>
+                df_player.randomAll();<br>
+                <span class="include">break</span>;<br>
+            <span class="include">case</span><span class="var">'a'</span>:<br>
+                df_player.randomAll();<br>
+                <span class="include">break</span>;<br><br>
+            
+                <span class="coment">/******************************************/</span><br>
+          }<br>
+        }<br><br>
+        
+        <span class="var">void</span> bluetooth_process()<br>
+        {<br><br>
+
+          <span class="include">if</span>(<span class="obj">Serial</span>.<span class="orange">abailable</span>() > 0)<br>
+          {<br>
+            <span class="coment">/* PC에서 전달된 정보가 있으면 한 문자씩 읽어서, 블루투스 모듈에 전달 */</span><br>
+            <span class="var">char</span> cmd = <span class="obj">Serial</span>.<span class="orange">read</span>();<br>
+            bt.<span class="orange">write</span>(cmd);<br>
+          }<br>
+          <span class="include">if</span>(bt.<span class="orange">abailable</span>() > 0)<br>
+          {<br>
+            <span class="coment">/* 블루투스 모듈 에서 전달된 정보가 있으면 PC에 전달 */</span><br>
+            <span class="var">char</span> cmd = bt.<span class="orange">read</span>();<br>
+            <span class="obj">Serial</span>.<span class="orange">write</span>(cmd);<br>
+            cmd_ctrl(cmd);<br>
+          }<br><br>
+        
+        }<br><br>
+        
+        <span class="coment">//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////</span><br><br>
+        
+        <span class="var">void</span> <span class="include">setup</span>() {<br>
+          <span class="coment">// put your setup code here, to run once:</span><br>
+          <span class="obj">Serial</span>.<span class="orange">begin</span>(9600);<br>
+          df_player_Module.<span class="orange">begin</span>(9600);<br>
+          bt.<span class="orange">begin</span>(9600);<br>
+          servo.<span class="orange">attach</span>(SERVO_PIN); <span class="coment">// 모터 핀 연결</span><br>
+          servo.<span class="orange">write</span>(servo_angle);<br><br>
+        
+          <span class="coment">/*****************************************************************/</span><br>
+          <span class="coment">/* DFPlayer 객체 초기화 */</span><br>
+          <span class="include">if</span> (!df_player.<span class="orange">begin</span>(df_player_Module), <span class="var">false</span>)<br>
+          {<br>
+            <span class="coment">//    Serial.println(F("Unable to begin:"));</span><br>
+              <span class="coment">//    Serial.println(F("1.Please recheck the connection!"));</span><br>
+                <span class="coment">//    Serial.println(F("2.Please insert the SD card!"));</span><br>
+                <span class="include">while</span>(<span class="var">true</span>);<br>
+          }<br>
+          <span class="orange">delay</span>(1);<br>
+          df_player.volume(20); <span class="coment">// 볼륨 지정</span><br>
+          df_player.setTimeOut(500); <span class="coment">//시리얼 통신용 타임아웃 시간 지정</span><br>
+          <span class="coment">//  Serial.println(F("DFPlayer Mini online."));</span><br>
+        <span class="coment">/*****************************************************************/</span><br>
+        }<br><br>
+        
+        <span class="var">void</span> <span class="include">loop</span>() {<br><br>
+        
+          bluetooth_process();<br><br>
+          
+          <span class="include">if</span>(processing == <span class="var">true</span>)<br>
+          {<br>
+            spin_motor();<br>
+            light_sensor();<br>
+          }<br><br>
+        
+        }<br><br>
+        
+        <span class="coment">//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////</span>
+    </p>
+</body>
+</html>

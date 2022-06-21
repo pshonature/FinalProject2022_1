@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>토양 자동 급수 장치</title>
+    <link rel="stylesheet" href="thinkerCad.css"> <!-- 외부 css를 받는다 -->
+    <link rel="icon" href="img/favicon.jpg" type="image/x-icon"> <!-- favicon 설정 -->
+    <script src="https://kit.fontawesome.com/92188d0589.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+</head>
+<body>
+            <!-- Todo: section 글자 위치 조정, header 링크 달기, html 파비콘 적용, 내용, 사진, 폰트, 링크 디자인?, header logo?, 조원소개 -->
+            <!-- header 부분 -->
+        <header> 
+            <div>
+                <nav class="navbar">
+                    <div>
+                        <a id="devTitle" href="index.html"><h1>청춘개발자</h1></a>
+                    </div>
+        
+                    <ul class="menu">
+                        <li><a href="project.html">Project</a></li>
+                        <li id="thinkerCadBorder"><a href="thinkerCad.html">Circuit</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="test.html">Test</a></li>
+                        <li><a href="from.html">Form</a></li>
+                    </ul>
+                    <div class="icon"><a href="contactUs.html"><i class="fa-solid fa-people-group"></i></a></div>
+                </nav>
+            </div>
+            </header>
+    <!---------------------------------------------->
+    <main>
+        <section class="section1">
+                <div class="icon2"><i class="fa-solid fa-bezier-curve"></i></div>
+                <h1>Arduino</h1>
+                <h2>변경, 해체, 계획의 설계.</h2>
+                <div class="line">구동흐름 및 회로도*</div>
+                <img class="pro" src="img/pro.jpg" alt="">
+            </div>
+        </section>
+
+    <!---------------------------------------------->
+    <div class="listLine"></div>
+    <!---------------------------------------------->
+
+        <section class="history">
+            <div>
+                <div id="historyTitel">구동흐름*</div>
+                <ul class="historyList">
+                    <li id="fristHistoryList">
+                        <img src="img/arduino_.jpg" alt="">
+                        <div class="text">
+                        <h1>아두이노</h1>
+                        <h2>아두이노 전원</h2>
+                        <h3>전력</h3>
+                        </div>
+                    </li>
+
+                    <li>
+                        <img src="img/soil_.jpg" alt="">
+                        <div class="text">
+                        <h1>토양 수분감지 센서</h1>
+                        <h2>토양 수분감지 센서 전원</h2>
+                        <h3>토양 수분감지 센서가 회로를 통해 켜진다.</h3>
+                        </div>
+                    </li>
+
+                    <li>
+                        <img src="img/relay_.jpg" alt="">
+                        <div class="text">
+                        <h1>9V 배터리, 릴레이, 워터 펌프 </h1>
+                        <h2>전기의 흐름</h2>
+                        <h3>9V와 릴레이 모듈로 워터 펌프를 작동시킨다.</h3>
+                        </div>
+                    </li>
+
+                    <li>
+                        <img src="img/rgb_.jpg" alt="">
+                        <div class="text">
+                        <h1>RGB LED</h1>
+                        <h2>rgb(255,35,60);</h2>
+                        <h3>RGB LED가 아두이노를 통해 켜진다 수분이 부족하면 조명이 켜지고 식물을 비춘다.</h3>
+                        </div>
+                    </li>
+
+                    <li>
+                        <img src="img/LCD_.jpg" alt="">
+                        <div class="text">
+                        <h1>LCD</h1>
+                        <h2>화면 출력</h2>
+                        <h3>토양 수분감지 센서가 수분이 부족하면 수분을 감지하여 LCD 모니터에 현재 습도를 보이게한다.</h3>
+                        </div>
+                    </li>
+
+                    <li id="lastLi">
+                        <img src="img/pump_.jpg" alt="">
+                        <div class="text">
+                        <h1>워터 펌프 모터</h1>
+                        <h2>물의 흐름</h2>
+                        <h3>워터 펌프가 호스에 연결된 물을 알 맞은 습도까지 도달하도록 물을 지급한다.</h3>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="back">
+            <div class="circuitTitle">회로도*</div>
+            <div>
+                <div class="mainCircuit">
+                    <img src="img/circuit1.jpg" alt="" height="600px">
+                    <div>
+                        <div class="textLine">회로 구성 과정</div>
+                        <ul id="circuitList">
+                            <li>✓ 아두이노에 lcd 모니터를 연결한다.</li>
+                            <li>✓ 릴레이 모듈을 작은 브레드보드에 연결한다.
+                            <li>✓ RGB LED 모듈을 아두이노와 브레드보드에 연결한다.</li>
+                            <li>✓ 수분감지 센서를 습도 모듈에 연결한다.</li>
+                            <li>✓ 워터 펌프 모터를 각각 브레드보드와 릴레이 모듈에 연결한다.</li>
+                            <li>✓ 전해 커패시터를 작은 브래드보드에  + -에 맞게 연결한다.</li>
+                            <li>✓ 워터 펌프 모터 & 9V 배터리를 연결한다.</li>
+                            <li>✓ 아두이노를 컴파일 하고 업로드 한다.</li>
+                        </ul>
+                        <!-- <h1>사용 부품 및 도구</h1>
+                        <h2>아두이노, 브레드보드, LCD, RGB LED, 배터리, 토양 감지 센서, 릴레이, 워터 모터펌프, 전해 캐패시터</h2> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+    </main>
+    <!---------------------------------------------->
+    <!-- 회로도 및 구동의 흐름, 동작개념도 내용을 담아야함. -->
+    <!---------------------------------------------->
+
+    <!-- 1.아두이노에 lcd 모니터를 연결한다.
+    2.릴레이 모듈을 작은  브래드 보드에 연결한다.
+    3.RGB LED 모듈을 아두이노와 작은 브래드 보드에 연결한다.
+    4.토양 감지 센서를 토양 습도 모듈에 연결한다.
+    5.DC 펌프를 각각 작은 브래드보드와 릴레이 모듈에 연결한다.
+    6.전해 커패시터를 작은 브래드보드에  + -에 맞게 연결한다.
+    7.회로도를 다 연결했으면 이제 DC잭 & 9V 배터리를 연결한다.
+    8.아두이노 스케치 선을 연결한다.
+    9.아두이노를 컴파일 한후 업로드 한다.
+    10.완성. -->
+
+</body>
+</html>
